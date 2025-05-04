@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Ulang Tahun Rika!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      text-align: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-top: 60px;
+      text-shadow: 2px 2px 5px #000;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px;
+      margin: 30px auto;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .emoji {
+      font-size: 2em;
+      margin: 10px 0;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1em;
+      color: #000; /* Changed to black */
+      padding-bottom: 50px;
+    }
+
+    .credit {
+      font-size: 0.9em;
+      color: #000; /* Changed to black */
+      margin-top: 10px;
+      font-style: italic;
+      animation: fadein 2s ease-in;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    iframe {
+      margin-top: 20px;
+      width: 80%;
+      height: 300px;
+      border: none;
+      border-radius: 15px;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background-color: red;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 8s linear infinite;
+      z-index: 0;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 HABEDE 🎉</h1>
+
+  <div class="card">
+    <p class="emoji">🎂🥳🎈</p>
+    <h2>HABEDE ORANG TUA WOKAWOK!</h2>
+    <p>
+      MANUSIA BERKEPALA DUA🙆‍♂️🙆‍♂️<br>
+      Selamat datang di masa di mana kata "ngantuk" jadi teman setia! WKWKWK 😂
+    </p>
+    <p>
+      KATA KATA HARI INI KA GEMM, SINGKAT SAJA "BERSABARLAH....SETELAH KESULITAN PASTI ADA KESULITAN YANG LEBIH SULIT LAGI". PAHAMM 🖐️🖐️ 
+    </p>
+
+    <iframe src="https://www.youtube.com/embed/WtLXpfPpb-k?autoplay=1&loop=1&playlist=WtLXpfPpb-k" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <p class="emoji">🎁🍰💃</p>
+  </div>
+
+  <div class="footer">
+    konten kilat 👍😊 
+    <div class="credit">by PUTRIESERN</div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-celebration.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio HTML.
+  </audio>
+
+  <script>
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.backgroundColor = ['#ff5e57', '#57ffda', '#f7ff57', '#a557ff'][Math.floor(Math.random() * 4)];
+      balloon.style.animationDuration = (Math.random() * 4 + 4) + 's';
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 8000);
+    }
+
+    setInterval(createBalloon, 500);
+  </script>
+
+</body>
+</html>
